@@ -10,3 +10,14 @@ canvas {
 #canvasWrapper {
     position:relative;
 }
+
+h1 {
+  font-size: .5em;
+  color: black;
+  position:absolute;
+  padding: 5px;
+  top: 0;
+  right: 100;
+  transform: scale(1.1);
+  z-index: -1
+}
