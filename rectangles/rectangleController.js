@@ -32,6 +32,9 @@ var prevStartY = 0;
 var prevWidth  = 0;
 var prevHeight = 0;
 
+// save previously displayed text
+var prevText = "Rectangle Coordinates";
+
 function handleMouseDown(e) {
     e.preventDefault();
     e.stopPropagation();
@@ -52,6 +55,17 @@ function handleMouseUp(e) {
     isDown = false;
     ctxo.strokeRect(prevStartX, prevStartY, prevWidth, prevHeight);
     console.log(prevStartX, prevStartY, prevStartX + prevWidth, prevStartY + prevHeight);
+	
+    //write to display
+    let header = document.querySelector("h1");
+    let x1 = prevStartX.toString();
+    let y1 = prevStartY.toString();
+    let x2 = (prevStartX + prevWidth).toString();
+    let y2 = (prevStartY + prevHeight).toString();
+    
+    let text = prevText + "\n" + x1 +', ' + y1 +', ' + x2 + ', ' + y2;
+    header.innerText = text;
+    prevText = text;
 }
 
 function handleMouseOut(e) {
