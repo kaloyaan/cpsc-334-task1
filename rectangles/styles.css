@@ -1,0 +1,12 @@
+body {
+    background-color: ivory;
+    margin: 0;
+}
+
+canvas {
+    position: absolute;
+}
+
+#canvasWrapper {
+    position:relative;
+}
