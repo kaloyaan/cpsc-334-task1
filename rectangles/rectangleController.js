@@ -66,6 +66,9 @@ function handleMouseUp(e) {
     let text = prevText + "\n" + x1 +', ' + y1 +', ' + x2 + ', ' + y2;
     header.innerText = text;
     prevText = text;
+    color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    ctx.strokeStyle = color;
+    ctxo.strokeStyle = color;
 }
 
 function handleMouseOut(e) {
@@ -88,10 +91,6 @@ function handleMouseMove(e) {
     // get the current mouse position
     mouseX = parseInt(e.clientX - offsetX);
     mouseY = parseInt(e.clientY - offsetY);
-
-    // Put your mousemove stuff here
-
-    
 
     // calculate the rectangle width/height based
     // on starting vs current mouse position
