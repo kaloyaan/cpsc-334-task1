@@ -1,13 +1,15 @@
 // get references to the canvas and context
 var canvas = document.getElementById("canvas");
+var header = document.querySelector("h1");
 var overlay = document.getElementById("overlay");
 var ctx = canvas.getContext("2d");
 var ctxo = overlay.getContext("2d");
 
 // style the context
-ctx.strokeStyle = "blue";
+color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+ctx.strokeStyle = color;
 ctx.lineWidth = 3;
-ctxo.strokeStyle = "blue";
+ctxo.strokeStyle = color;
 ctxo.lineWidth = 3;
 
 // calculate where the canvas is on the window
@@ -32,8 +34,23 @@ var prevStartY = 0;
 var prevWidth  = 0;
 var prevHeight = 0;
 
+var screenCount = 0;
+var screens = [];
+
 // save previously displayed text
 var prevText = "Rectangle Coordinates";
+
+function initScreens() {
+    let screenCount = window.prompt('This program aims to semi-automatically discover the mapping of screen space to physical space in the Leeds Studio at the Yale CCAM. To use it, draw rectangles with your mouse covering a single "display" and input the screen number (1 to the number of screens from left to right) on the following prompt. Please enter the number of screens/displays you see in the studio.');
+    screens = Array.from({length: screenCount}, (_, index) => 'Screen ' + (index + 1).toString() + ':')
+    //screens = Array(screenCount).fill('');
+    header.innerText = screens.join('\n');
+    console.log(screens);
+}
+
+window.onload = function() {
+    initScreens()
+}
 
 function handleMouseDown(e) {
     e.preventDefault();
@@ -57,15 +74,22 @@ function handleMouseUp(e) {
     console.log(prevStartX, prevStartY, prevStartX + prevWidth, prevStartY + prevHeight);
 	
     //write to display
-    let header = document.querySelector("h1");
     let x1 = prevStartX.toString();
     let y1 = prevStartY.toString();
     let x2 = (prevStartX + prevWidth).toString();
     let y2 = (prevStartY + prevHeight).toString();
     
-    let text = prevText + "\n" + x1 +', ' + y1 +', ' + x2 + ', ' + y2;
-    header.innerText = text;
-    prevText = text;
+    let screen = prompt("What screen number was that rectangle?", "");
+
+    if (screen != null) {
+        let text = prevText + "\n" + screen + ': ' +  x1 +', ' + x2 +', ' + y1 + ', ' + y2;
+        header.innerText = text;
+        prevText = text;
+        screens[screen - 1] = 'Screen ' + screen + ': ' + (x2 - x1) + ' x ' + (y2 - y1) + ', x1: ' + x1 +', x2: ' + x2 +', y1: ' + y1 + ', y2: ' + y2;
+        console.log(screens);
+        header.innerText = screens.join('\n');
+    }
+    
     color = '#' + Math.floor(Math.random() * 16777215).toString(16);
     ctx.strokeStyle = color;
     ctxo.strokeStyle = color;
