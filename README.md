@@ -9,8 +9,8 @@ This repository contains the code for Task 1 for Yale's CPSC334: Creative Embedd
 
 
 ## Task Description
-- Write a program to discover the mapping of screen space to physical space.
-- Your program should be semi-automatic in that it may require human input.
+- Write a program to discover the mapping of screen space to physical space in the Leeds Studio at the Yale CCAM..
+- The program should be semi-automatic in that it may require human input.
 
 
 ## Implementation Details
@@ -21,15 +21,15 @@ This repository contains the code for Task 1 for Yale's CPSC334: Creative Embedd
 - JavaScript for 
 
 ### File Structure
-- README.md
+- README.md (read for instructions)
   - This file which describes all aspects of the project and solution
-- final
-  - index.html contains the UI for the main program
+- final (download this file to run the program)
+  - index.html contains the UI for the main program (open this in a browser to run the program)
   - saveFile.html contains the UI for the popup to save the JSON file
   - css contains the style sheets for each html file
   - js contains the scripts that control the rectangle drawing and outputting
-- oldStuff
-  - Previous attempts at various parts of our solution (ignorable)
+- oldStuff (ignore)
+  - Previous attempts at various parts of our solution
 
 
 ## Usage Instructions
