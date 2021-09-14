@@ -2,7 +2,7 @@
 
 <html lang="en">
     <head>
-        <link href="fileStyles.css" rel="stylesheet">
+        <link href="css/fileStyles.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <title>
             CCAM Display Parser
@@ -21,37 +21,5 @@
             <a download="leedsConfiguration.json" id="downloadlink" style="display: none;">Download</a>
         </div>
     </body>
-    <script type="text/javascript" src="fileScript.js"></script>
-    <!-- <script>
-        // Function to create JSON file from passed page name/JSON coordinates and set it to the download link
-        (function () {
-            // Start with a null jsonFile
-            var jsonFile = null,
-
-            // Function to return JSON file from the passed text
-            makeJsonFile = function (text) {
-                // 
-                var data = new Blob([text], {type: 'application/json'});
-
-                // If the file already exists, we need to revoke the previous URL to prevent memory leaks
-                if (textFile !== null) {
-                    window.URL.revokeObjectURL(textFile);
-                }
-
-                // Create the jsonFile and return it
-                jsonFile = window.URL.createObjectURL(data);
-                return jsonFile;
-            };
-
-            // Store reference to the "create" button
-            var create = document.getElementById('create');
-
-            // Listen for clicks on "create" and make a new text file when it is clicked
-            create.addEventListener('click', function () {
-                var link = document.getElementById('downloadlink');
-                link.href = makeTextFile(window.name);
-                link.style.display = 'block';
-            }, false);
-        })();
-    </script> -->
+    <script type="text/javascript" src="js/fileScript.js"></script>
 </html>
