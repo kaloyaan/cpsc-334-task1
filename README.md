@@ -27,9 +27,13 @@ This repository contains the code for Task 1 for Yale's CPSC334: Creative Embedd
   - index.html contains the UI for the main program (open this in a browser to run the program)
   - saveFile.html contains the UI for the popup to save the JSON file
   - css contains the style sheets for each html file
+    - styles.css establishes the style for index.html
+    - fileStyles.css estables the style for saveFile.html
   - js contains the scripts that control the rectangle drawing and outputting
-    - script.js
-- oldStuff (ignore)
+    - script.js is the main file that controls input and output
+    - fileScript.js contains the logic for saving the JSON file
+    - resizeScript.js attempts to resize the Canvas on page resize (defunct)
+- oldStuff (defunct)
   - Previous attempts at various parts of our solution
 
 
