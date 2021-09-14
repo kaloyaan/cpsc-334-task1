@@ -28,6 +28,7 @@ This repository contains the code for Task 1 for Yale's CPSC334: Creative Embedd
   - saveFile.html contains the UI for the popup to save the JSON file
   - css contains the style sheets for each html file
   - js contains the scripts that control the rectangle drawing and outputting
+    - script.js
 - oldStuff (ignore)
   - Previous attempts at various parts of our solution
 
