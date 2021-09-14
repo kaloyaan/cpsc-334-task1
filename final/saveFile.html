@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="styles.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>
+            CCAM Display Parser
+        </title>
+    </head>
+    <body class="padded">
+		<div id="coordinates">
+            <h1 style="display: inline;">
+            	Save Display and Screen Data
+            </h1>
+      	</div>
+        <div>
+            <button id="create">Create file</button>
+        </div>
+        <div>
+            <a download="leedsConfiguration.json" id="downloadlink">Download</a>
+        </div>
+    </body>
+    <script>
+        (function () {
+            var textFile = null,
+            makeTextFile = function (text) {
+                var data = new Blob([text], {type: 'application/json'});
+
+                // If we are replacing a previously generated file we need to
+                // manually revoke the object URL to avoid memory leaks.
+                if (textFile !== null) {
+                window.URL.revokeObjectURL(textFile);
+                }
+
+                textFile = window.URL.createObjectURL(data);
+                
+                return textFile;
+            };
+
+
+            var create = document.getElementById('create');
+
+            create.addEventListener('click', function () {
+                var link = document.getElementById('downloadlink');
+                link.href = makeTextFile(window.name);
+                link.style.display = 'block';
+            }, false);
+        })();
+    </script>
+</html>

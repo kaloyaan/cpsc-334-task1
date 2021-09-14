@@ -1,6 +1,5 @@
 // get references to the canvas and context
 var canvas = document.getElementById("canvas");
-var header = document.querySelector("h1");
 var overlay = document.getElementById("overlay");
 var ctx = canvas.getContext("2d");
 var ctxo = overlay.getContext("2d");
@@ -8,9 +7,9 @@ var ctxo = overlay.getContext("2d");
 // style the context
 color = '#' + Math.floor(Math.random() * 16777215).toString(16);
 ctx.strokeStyle = color;
-ctx.lineWidth = 5;
+ctx.lineWidth = 3;
 ctxo.strokeStyle = color;
-ctxo.lineWidth = 5;
+ctxo.lineWidth = 3;
 
 // calculate where the canvas is on the window
 // (used to help calculate mouseX/mouseY)
@@ -34,28 +33,22 @@ var prevStartY = 0;
 var prevWidth  = 0;
 var prevHeight = 0;
 
-var displayOutput = {};
+var screenCount = 0;
+var screens = [];
+
+// save previously displayed text
+var prevText = "Rectangle Coordinates";
 
 function initScreens() {
-    window.alert('This program aims to semi-automatically discover the mapping of screen space to physical space in the Leeds Studio at the Yale CCAM. To use it, draw rectangles with your mouse covering a single "display" from top left to bottom right and input the screen number (1 to the number of screens from left to right) on the following prompt.');
-    let displayCount = window.prompt('First, please enter the number of virtual desktops you wish to consider. To determine this, make this window full screen by pressing F11 and then cycle through the desktops with SHIFT + WIN + LEFT/RIGHT.');
-    window.alert('Now, cycle to the leftmost desktop you wish to address and make sure the window is fullscreened there. Press F5 to reload and start drawing rectangles.');
-    for (let i = 1; i <= displayCount; i++) { 
-        displayOutput['Virtual Display ' + i] = [];
-    }
-    console.log(displayOutput);
+    let screenCount = window.prompt('This program aims to semi-automatically discover the mapping of screen space to physical space in the Leeds Studio at the Yale CCAM. To use it, draw rectangles with your mouse covering a single "display" and input the screen number (1 to the number of screens from left to right) on the following prompt. Please enter the number of screens/displays you see in the studio.');
+    screens = Array.from({length: screenCount}, (_, index) => 'Screen ' + (index + 1).toString() + ':')
+    //screens = Array(screenCount).fill('');
+    console.log(screens);
 }
 
 window.onload = function() {
     initScreens()
 }
-
-document.onkeypress = function (e) {
-    e = e || window.event;
-    if (e.key == 'd') {
-        let rectWindow = window.open("saveFile.html", JSON.stringify(displayOutput), "width=200, height=200");
-    }
-};
 
 function handleMouseDown(e) {
     e.preventDefault();
@@ -84,13 +77,14 @@ function handleMouseUp(e) {
     let x2 = (prevStartX + prevWidth).toString();
     let y2 = (prevStartY + prevHeight).toString();
     
-    let displayNum = prompt("From which virtual display (from left to right starting at 1) did that rectangle come?", "");
-    let screenNum = prompt("From which screen number (from left to right starting at 1, including all virtual displays) did that rectangle come?", "");
+    let screen = prompt("What screen number was that rectangle?", "");
 
-    if (displayNum != null && screenNum != null) {
-        displayOutput['Virtual Display ' + screenNum][screenNum - 1] = {'Screen Number': screenNum, 'width': x2 - x1, 'height': y2 - y1, 'x1': x1, 'x2': x2, 'y1': y1, 'y2': y2};
+    if (screen != null) {
+        let text = prevText + "\n" + screen + ': ' +  x1 +', ' + x2 +', ' + y1 + ', ' + y2;
+        prevText = text;
+        screens[screen - 1] = 'Screen ' + screen + ': ' + (x2 - x1) + ' x ' + (y2 - y1) + ', x1: ' + x1 +', x2: ' + x2 +', y1: ' + y1 + ', y2: ' + y2;
+        console.log(screens);
     }
-    console.log(JSON.stringify(displayOutput));
     
     color = '#' + Math.floor(Math.random() * 16777215).toString(16);
     ctx.strokeStyle = color;

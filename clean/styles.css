@@ -8,18 +8,13 @@ canvas {
 }
 
 #canvasWrapper {
-    position:relative;
-}
-
-button {
-    position: absolute;
+    position: relative;
 }
 
 h1 {
-    position: absolute;
     color: #41FF00;
 }
 
-a {
-    color: #41FF00;
+h2 {
+  color: white;
 }
