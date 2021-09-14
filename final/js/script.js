@@ -118,7 +118,7 @@ function handleMouseUp(e) {
     
     // Prompt the user to input the virtual display and the screen number
     let displayNum = prompt("From which virtual display (from left to right starting at 1) did that rectangle come?", "");
-    let screenNum = prompt("From which screen number (from left to right starting at 1, including all virtual displays) did that rectangle come?", "");
+    let screenNum = prompt("From which screen number (from left to right starting at 1, irrespective of virtual displays) did that rectangle come?", "");
 
     // Modify the displayOutput according to the new rectangle and user input
     if (displayNum != null && screenNum != null) {
