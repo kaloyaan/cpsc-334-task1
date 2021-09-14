@@ -18,7 +18,7 @@ This repository contains the code for Task 1 for Yale's CPSC334: Creative Embedd
 ### Languages
 - HTML for the basic UI
 - CSS for styling the UI
-- JavaScript for 
+- JavaScript for the computational aspects
 
 ### File Structure
 - README.md (read for instructions)
