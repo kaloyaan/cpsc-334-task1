@@ -47,7 +47,7 @@ window.onload = function() {
 function initScreens() {
     // Prompt the user with instructions and get the number of virtual displays
     window.alert('This program aims to semi-automatically discover the mapping of screen space to physical space in the Leeds Studio at the Yale CCAM. To use it, draw rectangles with your mouse covering a single "display" from top left to bottom right and input the screen number (1 to the number of screens from left to right) on the following prompt.');
-    window.alert('Now, cycle to the leftmost desktop (with SHIFT + WIN + LEFT) you wish to address and make sure the window is fullscreened there (by pressing F11). Press F5 to reload and start the program on your desired display. When you have finished this virtual display, press SHIFT + WIN + LEFT to go to the next. When you are completely done, press the "d" key to save a JSON file with the coordinates.');
+    window.alert('Now, cycle to the leftmost desktop (with SHIFT + WIN + LEFT) you wish to address and make sure the window is fullscreened there (by pressing F11). Press F5 to reload and start the program on your desired display. When you have finished this virtual display, press SHIFT + WIN + LEFT to go to the next. When you are completely done, press the "d" key to save a JSON file with the coordinates. PLEASE READ THE README FOR BETTER INSTRUCTIONS!!!');
     // let displayCount = window.prompt('First, please enter the number of virtual desktops you wish to consider. To determine this, make this window full screen by pressing F11 and then cycle through the desktops.');
     
     // // Fill the displayOutput with empty virtual display coordinates
