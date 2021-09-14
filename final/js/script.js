@@ -111,10 +111,10 @@ function handleMouseUp(e) {
     ctxo.strokeRect(prevStartX, prevStartY, prevWidth, prevHeight);
 	
     // Store the coordinates 
-    let x1 = prevStartX.toString();
-    let y1 = prevStartY.toString();
-    let x2 = (prevStartX + prevWidth).toString();
-    let y2 = (prevStartY + prevHeight).toString();
+    let x1 = prevStartX;
+    let y1 = prevStartY;
+    let x2 = prevStartX + prevWidth;
+    let y2 = prevStartY + prevHeight;
     
     // Prompt the user to input the virtual display and the screen number
     let displayNum = prompt("From which virtual display (from left to right starting at 1) did that rectangle come?", "");
