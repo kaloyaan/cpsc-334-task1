@@ -45,7 +45,7 @@ This repository contains the code for Task 1 for Yale's CPSC334: Creative Embedd
   2. Press F5 to reload and start the program on your desired display.
   3. Draw rectangles with your mouse covering a single "display" from top left to bottom right (visually)
   4. Input the virtual desktop number (1 to the number of desktop from left to right) on the following prompt.
-  5. Input the screen number (1 to the number of screens from left to right) on the following prompt.
+  5. Input the screen number (1 to the number of screens from left to right, irrespective of virtual displays) on the following prompt.
   6. Shift to the next virtual desktop (cycle with SHIFT + WIN + LEFT) and repeat Steps 3-5 for each screen in it.
 - When you are completely done with all desired desktops/screens, download a JSON file with the coordinates using the following steps:
   1. Press the "d" key on your keyboard to open a new "save" tab.
