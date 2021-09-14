@@ -5,6 +5,10 @@ Code for Task 1 for CPSC334
 
 ## Usage Instructions
 
+### Screen Mapping
+
+### Output
+
 ## JavaScript Approach Analysis
 
 ### Benefits
