@@ -64,7 +64,7 @@ This repository contains the code for Task 1 for Yale's CPSC334: Creative Embedd
 - Nothing had to be hard-coded, so this program could be applied reasonably easily to any extended-display setup.
 
 ### Detriments
-- The current system configruation does not allow us to run across virtual displays, unlike some natively-run code.
+- The current system configuration does not allow us to run across virtual displays, unlike some natively-run code.
 - The process of utilzing full screen is a bit janky.
 - To use all the features of Javascript, we would need to run on a server rather than just via files.
 
