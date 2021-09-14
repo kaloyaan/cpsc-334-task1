@@ -122,10 +122,10 @@ function handleMouseUp(e) {
 
     // Modify the displayOutput according to the new rectangle and user input
     if (displayNum != null && screenNum != null) {
-        if (!('Virtual Display ' + screenNum in displayOutput)) {
-            displayOutput['Virtual Display ' + screenNum] = [];
+        if (!('Virtual Display ' + displayNum in displayOutput)) {
+            displayOutput['Virtual Display ' + displayNum] = [];
         }
-        displayOutput['Virtual Display ' + screenNum].push({'Screen Number': screenNum, 'width': x2 - x1, 'height': y2 - y1, 'x1': x1, 'x2': x2, 'y1': y1, 'y2': y2});
+        displayOutput['Virtual Display ' + displayNum].push({'Screen Number': screenNum, 'width': x2 - x1, 'height': y2 - y1, 'x1': x1, 'x2': x2, 'y1': y1, 'y2': y2});
     }
     
     // Style the rectangle borders randomly
