@@ -60,13 +60,7 @@ When you are completely done with all desired desktops/screens, you can download
   3. Click the "Create file" button to create the JSON file.
   4. Press the "Download" link to download the link to your computer.
 
-![demo](/images/demo.mp4)
-
-<figure class="video_container">
-  <video controls="true" allowfullscreen="true" poster="images/rectangleArt.png">
-    <source src="images/demo.mp4" type="video/mp4">
-  </video>
-</figure>
+![demo](/images/demo.gif)
 
 ### Output
 The output is *leedsConfiguration.json*, a JSON file with the coordinates detailing the virtual display, screen number, screen dimensions, and corner coordinates (x and y) of each screen according to the following hierarchy:
