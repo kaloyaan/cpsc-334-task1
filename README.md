@@ -22,10 +22,9 @@ This repository contains the code for Task 1 for Yale's CPSC334: Creative Embedd
 - JavaScript for the computational aspects
 
 ### File Structure
-- *README.md* (read for instructions)
-  - This file which describes all aspects of the project and solution.
-- final (download this file to run the program)
-  - *index.html* contains the UI for the main program (open this in a browser to run the program).
+- *README.md* (read for instructions) describes all aspects of the project and solution
+- *final* contains the main program (download this folder to run the program)
+  - *index.html* contains the UI for the main program (open this in a browser to run the program)
   - *saveFile.html* contains the UI for the popup to save the JSON file
   - *css* contains the style sheets for each html file
     - *styles.css* establishes the style for index.html
@@ -34,8 +33,8 @@ This repository contains the code for Task 1 for Yale's CPSC334: Creative Embedd
     - *script.js* is the main file that controls input and output
     - *fileScript.js* contains the logic for saving the JSON file
     - *resizeScript.js* attempts to resize the Canvas on page resize (defunct)
-- *oldStuff* (defunct)
-  - Previous attempts at various parts of our solution
+- *images* contains the images and GIFs used in *README.md*
+- *oldStuff* contains previous attempts at various parts of our solution (defunct)
 
 
 ## Usage Instructions
@@ -46,7 +45,7 @@ This repository contains the code for Task 1 for Yale's CPSC334: Creative Embedd
   2. Open up *index.html* under the *final* folder within the *cpsc-334-task1* root folder (by double clicking or via some sort of web server if desired).
 
 ### Screen Mapping
-- Once the program loads, to create the mapping, use the following steps:
+Once the program loads, to create the mapping, use the following steps:
   1. Cycle to the leftmost desktop (with **SHIFT** + **WIN** + **LEFT**) you wish to address and make sure the window is fullscreened there (by pressing F11).
   2. Press F5 to reload and start the program on your desired display.
   3. Press **ENTER** twice to close the instructions.
@@ -55,14 +54,14 @@ This repository contains the code for Task 1 for Yale's CPSC334: Creative Embedd
   6. Input the screen number (1 to the number of screens from left to right, irrespective of virtual displays) on the following prompt.
   7. Repeat steps 4-6 for each screen on the virtual desktop.
   8. Shift to the next virtual desktop (cycle with **SHIFT** + **WIN** + **LEFT**) and repeat steps 4-7.
-- When you are completely done with all desired desktops/screens, you can download a JSON file with the coordinates using the following steps:
+When you are completely done with all desired desktops/screens, you can download a JSON file with the coordinates using the following steps:
   1. (Recommended) cycle with **SHIFT** + **WIN** + **LEFT** to your main computer display.
   2. Press the **d** key on your keyboard to open a new "save" tab.
   3. Click the "Create file" button to create the JSON file.
   4. Press the "Download" link to download the link to your computer.
 
 ### Output
-- The output is *leedsConfiguration.json*, a JSON file with the coordinates detailing the virtual display, screen number, screen dimensions, and corner coordinates (x and y) of each screen according to the following hierarchy:
+The output is *leedsConfiguration.json*, a JSON file with the coordinates detailing the virtual display, screen number, screen dimensions, and corner coordinates (x and y) of each screen according to the following hierarchy:
   - Virtual Display Number (from left to right)
     - Screen Number (from left to right)
     - width
@@ -71,6 +70,7 @@ This repository contains the code for Task 1 for Yale's CPSC334: Creative Embedd
     - x2
     - y1
     - y2
+By using JSON, this output can be easily used programatically yet still understood visually.
 
 
 ## Approach Analysis
@@ -82,10 +82,14 @@ This repository contains the code for Task 1 for Yale's CPSC334: Creative Embedd
 
 ### Downside
 - The current system configuration does not allow us to run across virtual displays, unlike some natively-run code.
-- The process of utilzing full screen is a bit janky.
+- The process of utilzing full screen is a bit janky without changing system setting.
 - To use all the features of Javascript, we would need to run on a server rather than just via files, removing some of the universality.
 
 
 ## Potential Pitfalls
 - Sometimes when drawing a rectangle, a prompt does not immendiately appear. To fix this, click the center of the rectangle to initiate the prompt.
 - If you draw a rectangle and did not want to save it, you can hit 'cancel' on the prompt and it will not be saved.
+
+
+## Interesting Note on Generative Art
+While not meant to be a generative art system, this program could definitely be modified to be one, and some outputs from playing around are quite visually appealing (and evocative of the introduction to Pixar's *Monster's Inc.*).
