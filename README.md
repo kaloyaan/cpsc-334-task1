@@ -60,6 +60,12 @@ When you are completely done with all desired desktops/screens, you can download
   3. Click the "Create file" button to create the JSON file.
   4. Press the "Download" link to download the link to your computer.
 
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true" poster="images/rectangleArt.png">
+    <source src="images/demo.mp4" type="video/mp4">
+  </video>
+</figure>
+
 ### Output
 The output is *leedsConfiguration.json*, a JSON file with the coordinates detailing the virtual display, screen number, screen dimensions, and corner coordinates (x and y) of each screen according to the following hierarchy:
   - Virtual Display Number (from left to right)
@@ -83,15 +89,17 @@ By using JSON, this output can be easily used programatically yet still understo
 
 ### Downsides
 - The current system configuration does not allow us to run across virtual displays, unlike some natively-run code.
-- The process of utilzing full screen is a bit janky without changing system setting.
+- The process of utilizing full screen is a bit janky without changing system settings.
 - To use all the features of Javascript, we would need to run on a server rather than just via files, removing some of the universality.
 - The output still needs to be interpreted somewhat as opposed to a more visual picture.
 
 
 ## Potential Pitfalls
 - Sometimes when drawing a rectangle, a prompt does not immendiately appear. To fix this, click the center of the rectangle to initiate the prompt.
-- If you draw a rectangle and did not want to save it, you can hit 'cancel' on the prompt and it will not be saved.
+- If you draw a rectangle and did not want to save it, you can hit 'cancel' on the prompts and it will not be saved.
 
 
 ## Interesting Note on Generative Art
 While not meant to be a generative art system, this program could definitely be modified to be one, and some outputs from playing around are quite visually appealing (and evocative of the introduction sequence to Pixar's *Monster's Inc.*), as shown below.
+
+![rectangles](/images/rectangleArt.png)
