@@ -60,6 +60,8 @@ When you are completely done with all desired desktops/screens, you can download
   3. Click the "Create file" button to create the JSON file.
   4. Press the "Download" link to download the link to your computer.
 
+![demo](/images/demo.mp4)
+
 <figure class="video_container">
   <video controls="true" allowfullscreen="true" poster="images/rectangleArt.png">
     <source src="images/demo.mp4" type="video/mp4">
