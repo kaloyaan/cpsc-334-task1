@@ -33,7 +33,7 @@ This repository contains the code for Task 1 for Yale's CPSC334: Creative Embedd
     - *script.js* is the main file that controls input and output
     - *fileScript.js* contains the logic for saving the JSON file
     - *resizeScript.js* attempts to resize the Canvas on page resize (defunct)
-- *images* contains the images and GIFs used in *README.md*
+- *images* contains the images and videos used in *README.md*
 - *oldStuff* contains previous attempts at various parts of our solution (defunct)
 
 
