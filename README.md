@@ -63,7 +63,7 @@ When you are completely done with all desired desktops/screens, you can download
 ### Output
 The output is *leedsConfiguration.json*, a JSON file with the coordinates detailing the virtual display, screen number, screen dimensions, and corner coordinates (x and y) of each screen according to the following hierarchy:
   - Virtual Display Number (from left to right)
-    - Screen Number (from left to right)
+    - Screen Number (from left to right): what number screen the entry is for, irrespective of virtual displays
     - width: the length of the screen in the x-direction
     - height: the length of the screen in the y-direction
     - x1: the x-coordinate of the "top left" point of the screen
