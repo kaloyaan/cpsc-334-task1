@@ -67,9 +67,9 @@ The output is *leedsConfiguration.json*, a JSON file with the coordinates detail
     - width: the length of the screen in the x-direction
     - height: the length of the screen in the y-direction
     - x1: the x-coordinate of the "top left" point of the screen
-    - x2: the x-coordinate of the "top right" point of the screen
+    - x2: the x-coordinate of the "bottom right" point of the screen
     - y1: the y-coordinate of the "top left" point of the screen
-    - y2: the y-coordinate of the "top right" point of the screen
+    - y2: the y-coordinate of the "bottom right" point of the screen
 
 By using JSON, this output can be easily used programatically yet still understood visually.
 
