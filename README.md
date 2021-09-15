@@ -64,12 +64,13 @@ When you are completely done with all desired desktops/screens, you can download
 The output is *leedsConfiguration.json*, a JSON file with the coordinates detailing the virtual display, screen number, screen dimensions, and corner coordinates (x and y) of each screen according to the following hierarchy:
   - Virtual Display Number (from left to right)
     - Screen Number (from left to right)
-    - width
-    - height
-    - x1
-    - x2
-    - y1
-    - y2
+    - width: the length of the screen in the x-direction
+    - height: the length of the screen in the y-direction
+    - x1: the x-coordinate of the "top left" point of the screen
+    - x2: the x-coordinate of the "top right" point of the screen
+    - y1: the y-coordinate of the "top left" point of the screen
+    - y2: the y-coordinate of the "top right" point of the screen
+
 By using JSON, this output can be easily used programatically yet still understood visually.
 
 
@@ -84,6 +85,7 @@ By using JSON, this output can be easily used programatically yet still understo
 - The current system configuration does not allow us to run across virtual displays, unlike some natively-run code.
 - The process of utilzing full screen is a bit janky without changing system setting.
 - To use all the features of Javascript, we would need to run on a server rather than just via files, removing some of the universality.
+- The output still needs to be interpreted somewhat as opposed to a more visual picture.
 
 
 ## Potential Pitfalls
