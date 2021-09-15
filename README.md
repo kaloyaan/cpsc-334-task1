@@ -40,7 +40,7 @@ This repository contains the code for Task 1 for Yale's CPSC334: Creative Embedd
 ## Usage Instructions
 
 ### Setup
-- To set up this repository locally for display configuration, use the following steps:
+To set up this repository locally for display configuration, use the following steps:
   1. Download the code to your local computer (either using git clone or by downloading a .zip folder).
   2. Open up *index.html* under the *final* folder within the *cpsc-334-task1* root folder (by double clicking or via some sort of web server if desired).
 
@@ -81,7 +81,7 @@ By using JSON, this output can be easily used programatically yet still understo
 - Users do not have to change their system configuration to make this program work.
 - Nothing was hard-coded, so this program could be applied reasonably easily to any extended-display setup, regardless of display dimensions or number of displays/extended desktops.
 
-### Downside
+### Downsides
 - The current system configuration does not allow us to run across virtual displays, unlike some natively-run code.
 - The process of utilzing full screen is a bit janky without changing system setting.
 - To use all the features of Javascript, we would need to run on a server rather than just via files, removing some of the universality.
@@ -94,4 +94,4 @@ By using JSON, this output can be easily used programatically yet still understo
 
 
 ## Interesting Note on Generative Art
-While not meant to be a generative art system, this program could definitely be modified to be one, and some outputs from playing around are quite visually appealing (and evocative of the introduction to Pixar's *Monster's Inc.*).
+While not meant to be a generative art system, this program could definitely be modified to be one, and some outputs from playing around are quite visually appealing (and evocative of the introduction sequence to Pixar's *Monster's Inc.*), as shown below.
