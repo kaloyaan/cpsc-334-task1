@@ -49,11 +49,11 @@ Once the program loads, to create the mapping, use the following steps:
   1. Cycle to the leftmost desktop (with **SHIFT** + **WIN** + **LEFT**) you wish to address and make sure the window is fullscreened there (by pressing F11).
   2. Press F5 to reload and start the program on your desired display.
   3. Press **ENTER** twice to close the instructions.
-  4. Draw rectangles with your mouse covering a single "display" from top left to bottom right (visually).
+  4. Draw a rectangle with your mouse covering a single "display" from top left to bottom right (visually).
   5. Input the virtual desktop number (1 to the number of desktops from left to right) on the following prompt.
   6. Input the screen number (1 to the number of screens from left to right, irrespective of virtual displays) on the following prompt.
   7. Repeat steps 4-6 for each screen on the virtual desktop.
-  8. Shift to the next virtual desktop (cycle with **SHIFT** + **WIN** + **LEFT**) and repeat steps 4-7.
+  8. Shift through each virtual desktop (cycle with **SHIFT** + **WIN** + **LEFT**) and repeat steps 4-7.
 When you are completely done with all desired desktops/screens, you can download a JSON file with the coordinates using the following steps:
   1. (Recommended) cycle with **SHIFT** + **WIN** + **LEFT** to your main computer display.
   2. Press the **d** key on your keyboard to open a new "save" tab.
