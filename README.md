@@ -77,7 +77,7 @@ By using JSON, this output can be easily used programatically yet still understo
 ## Approach Analysis
 
 ### Benefits
-- Unlike other popular languages and frameworks like Python, Javascript can run on anything with a browser.
+- Unlike other popular languages and frameworks like Python and Processing, Javascript can run on anything with a browser.
 - Users do not have to change their system configuration to make this program work.
 - Nothing was hard-coded, so this program could be applied reasonably easily to any extended-display setup, regardless of display dimensions or number of displays/extended desktops.
 
